@@ -1,0 +1,52 @@
+#RETAIL STORE DATABASE
+=======================
+
+
+1. Find the Total Number of Orders for Each Customer
+
+# 1 select c.customer_id,c.first_name,count(o.order_id) as total_orders from customers c join orders o on c.customer_id=o.customer_id group by c.first_name,c.customer_id order by count(o.order_id) desc;
+=============================================================================================
+
+2. Find the Total Sales Amount for Each Product (Revenue per Product)
+
+# 2select p.product_id,p.product_name,sum(od.quantity *od.unit_price) as total_revenue from products p join order_details od on p.product_id=od.product_id group by p.product_name,p.product_id order by total_revenue desc;
+
+============================================================================================
+
+3. Find the Most Expensive Product Sold
+# 3 select p.product_name,max(od.unit_price) from products p join order_details od on p.product_id=od.product_id join orders o on o.order_id=od.order_id where o.order_status='completed' group by p.product_name order by max(od.unit_price) desc limit 1;
+==========================================================================================
+
+4. Get the List of Customers Who Have Placed Orders in the Last 30 Days
+#4 select c.customer_id,c.first_name,o.order_date as latest_order from customers c join orders o on c.customer_id=o.customer_id where o.order_date>=30 group by c.customer_id order by latest_order desc;
+
+=========================================================================================
+
+5. Calculate the Total Amount Paid by Each Customer
+#5 select c.customer_id,c.first_name,sum(p.payment_amount) as total_amount_paid from customers c join orders o on c.customer_id=o.customer_id join payments p on o.order_id=p.order_id GROUP BY c.customer_id,c.first_name ORDER BY total_amount_paid DESC; 
+
+=========================================================================================
+
+6. Get the Number of Products Sold by Category
+# 6 select p.product_id,p.category,sum(od.quantity) as total_sell from products p join order_details od on p.product_id=od.product_id group by p.category,p.product_id order by total_sell desc;
+==========================================================================================
+
+7. List All Orders That Are Pending (i.e., Orders that haven't been shipped yet)
+# 7 select * from orders where order_status='pending';
+ 
+===================================================================================
+
+8. Find the Average Order Value (Total Order Amount / Number of Orders)
+#8 select count(order_id) as total_order,sum(total_amount)/count(order_id)  as average_order_value from orders where order_status ='completed';
+
+==================================================================================
+
+9. List the Top 5 Customers Who Have Spent the Most Money
+#9 select c.customer_id,c.first_name,sum(o.total_amount) as total_amount_spent from customers c join orders o on o.customer_id=o.customer_id where o.order_status ='completed' group by c.first_name,c.customer_id order by total_amount_spent desc limit 5;
+
+=================================================================================
+
+10. Find the Products That Have Never Been Sold
+#10 select p.product_id,p.product_name,p.category,p.price,p.stock_quantity from products p left join order_details o on p.product_id = o.product_id where p.product_id is null;
+    ===========================================================================================
+    

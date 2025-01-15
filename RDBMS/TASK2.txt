@@ -1,0 +1,170 @@
+
+TASK 2 OLA DB
+===============
+
+==>CREATING DATABASE
+======================
+
+CREATE database ola_db ;
+
+
+==>INSERTING DATA INTO DRIVERS TABLE
+=======================================
+
+INSERT INTO drivers (first_name, last_name, phone, city, vehicle_type, rating)
+VALUES
+('Raj', 'Sharma', '9876543210', 'Mumbai', 'Sedan', 4.50),
+('Priya', 'Verma', '9123456789', 'Delhi', 'SUV', 4.80),
+('Arjun', 'Mehta', '9988776655', 'Bangalore', 'Truck', 4.20),
+('Anjali', 'Singh', '9867543210', 'Kolkata', 'Sedan', 4.70),
+('Amit', 'Gupta', '9123678450', 'Chennai', 'SUV', 4.60),
+('Neha', 'Patel', '9876012345', 'Hyderabad', 'Van', 4.30),
+('Vikram', 'Rao', '9654321780', 'Pune', 'Sedan', 4.40),
+('Kiran', 'Das', '9871209876', 'Ahmedabad', 'Truck', 4.90),
+('Ravi', 'Kumar', '9812345678', 'Jaipur', 'SUV', 4.10),
+('Pooja', 'Mishra', '9798543210', 'Surat', 'Sedan', 4.80),
+('Suresh', 'Naik', '9987123456', 'Lucknow', 'Van', 4.20),
+('Meera', 'Iyer', '9912345670', 'Nagpur', 'Truck', 4.60),
+('Karan', 'Chopra', '9867123450', 'Indore', 'SUV', 4.30),
+('Radhika', 'Nair', '9876123450', 'Bhopal', 'Sedan', 4.70),
+('Manoj', 'Reddy', '9765432180', 'Patna', 'Van', 4.50),
+('Sneha', 'Joshi', '9898765432', 'Vadodara', 'SUV', 4.90),
+('Ajay', 'Pillai', '9934567890', 'Thane', 'Truck', 4.40),
+('Divya', 'Pandey', '9954321876', 'Agra', 'Sedan', 4.30),
+('Rahul', 'Deshmukh', '9876543120', 'Visakhapatnam', 'SUV', 4.80),
+('Shweta', 'Kulkarni', '9918765432', 'Coimbatore', 'Van', 4.60);
+
+
+INSERTING DATA INTO PAYMENTS TABLES
+=====================================
+
+INSERT INTO payments (payment_id, payment_mode, amount, payment_date)
+VALUES
+(6, 'UPI', 262.53, '2024-09-03 09:14:15'),
+(12, 'Wallet', 375.12, '2024-05-07 23:37:58'),
+(15, 'Cash', 983.43, '2023-03-01 22:48:36'),
+(4, 'Credit Card', 300.43, '2024-04-26 21:14:34'),
+(4, 'Credit Card', 55.53, '2023-02-22 06:23:03'),
+(15, 'Debit Card', 407.82, '2024-11-09 15:50:54'),
+(13, 'Cash', 58.36, '2024-08-22 21:19:28'),
+(2, 'UPI', 673.75, '2024-01-11 14:57:52'),
+(15, 'Credit Card', 703.15, '2023-07-03 18:54:59'),
+(14, 'Cash', 670.26, '2023-06-13 19:57:07'),
+(2, 'UPI', 625.80, '2024-03-07 01:54:52'),
+(12, 'Wallet', 339.97, '2023-07-26 21:40:55'),
+(7, 'Cash', 331.84, '2023-09-26 12:54:43'),
+(2, 'Credit Card', 750.74, '2023-11-09 12:59:45'),
+(4, 'Credit Card', 722.63, '2023-06-28 14:08:44'),
+(5, 'Cash', 127.03, '2024-06-11 02:12:41'),
+(10, 'Credit Card', 275.75, '2024-03-18 03:26:40'),
+(3, 'Debit Card', 357.30, '2024-05-08 00:07:16'),
+(15, 'Cash', 789.92, '2023-11-01 09:53:16'),
+(13, 'Debit Card', 135.93, '2024-08-14 21:02:35');
+
+
+INSERTING DATA INTO RIDERS TABLES
+================================
+
+INSERT INTO users (first_name, last_name, phone, city, join_date)
+VALUES
+('Akshay', 'Singh', '+917746475365', 'Kolkata', '2020-12-28 11:12:13'),
+('Riya', 'Agarwal', '+919744172675', 'Vadodara', '2024-08-20 00:52:49'),
+('Vivaan', 'Agarwal', '+917875814631', 'Chennai', '2022-12-17 19:30:59'),
+('Riya', 'Joshi', '+917392134028', 'Chandigarh', '2022-12-03 00:57:41'),
+('Meera', 'Thakur', '+919232297567', 'Chennai', '2020-07-20 23:10:10'),
+('Vivaan', 'Roy', '+917906708919', 'Mumbai', '2024-11-28 08:14:17'),
+('Arjun', 'Das', '+918072924345', 'Ahmedabad', '2022-03-23 16:21:21'),
+('Akshay', 'Malhotra', '+919594835019', 'Bhopal', '2024-05-13 15:56:41'),
+('Anjali', 'Malhotra', '+918292490972', 'Coimbatore', '2021-09-13 22:56:58'),
+('Siddharth', 'Reddy', '+919244397359', 'Pune', '2024-12-16 03:57:56'),
+('Ishaan', 'Verma', '+917959411490', 'Coimbatore', '2024-09-23 14:11:05'),
+('Rahul', 'Reddy', '+919038351747', 'Mumbai', '2021-03-14 13:03:25'),
+('Diya', 'Ghosh', '+919916545666', 'Bhopal', '2020-05-03 19:12:12'),
+('Aditya', 'Joshi', '+919648489141', 'Jaipur', '2022-04-28 10:32:05'),
+('Ananya', 'Kumar', '+919195288732', 'Bangalore', '2024-12-20 14:50:23'),
+('Akshay', 'Sharma', '+919916890163', 'Nagpur', '2020-07-16 11:19:53'),
+('Meera', 'Roy', '+918976648378', 'Lucknow', '2021-10-16 00:01:20'),
+('Diya', 'Sharma', '+918131796252', 'Chandigarh', '2022-05-20 06:01:36'),
+('Pooja', 'Kumar', '+918791458468', 'Ahmedabad', '2022-02-17 02:35:57'),
+('Neha', 'Jain', '+919890221287', 'Bangalore', '2022-09-23 08:20:52');
+
+
+
+
+
+INSERTING DATA INTO RIDES TABLES
+============================
+
+INSERT INTO orders (rider_id, driver_id, ride_date, pickup_location, drop_location, distance, fare, ride_status)
+VALUES
+(6, 5, '2023-12-04 17:13:28', 62.73, 50.43, 21.97, 219.70, 'In Progress'),
+(18, 4, '2023-04-14 20:21:41', 83.55, 78.33, 7.16, 71.60, 'In Progress'),
+(13, 7, '2023-02-15 23:40:38', 71.27, 68.13, 39.10, 391.00, 'Cancelled'),
+(4, 6, '2024-10-20 11:17:32', 30.02, 32.16, 34.75, 347.50, 'Completed'),
+(3, 8, '2024-10-05 13:55:09', 79.60, 29.25, 49.63, 496.30, 'Cancelled'),
+(18, 10, '2023-07-19 20:20:34', 75.66, 20.97, 32.96, 329.60, 'In Progress'),
+(11, 2, '2023-06-07 03:13:08', 66.67, 76.83, 3.48, 34.80, 'Cancelled'),
+(20, 1, '2023-11-26 08:57:49', 63.24, 15.38, 26.82, 268.20, 'In Progress'),
+(17, 10, '2024-04-15 00:10:39', 36.26, 33.24, 44.08, 440.80, 'In Progress'),
+(10, 8, '2023-07-21 11:04:01', 96.59, 17.07, 14.09, 140.90, 'In Progress'),
+(13, 6, '2024-01-25 12:56:12', 10.46, 24.57, 13.16, 131.60, 'In Progress'),
+(4, 4, '2024-03-11 02:01:54', 51.47, 62.97, 13.68, 136.80, 'In Progress'),
+(13, 5, '2024-07-02 18:40:45', 58.06, 79.93, 8.23, 82.30, 'Completed'),
+(4, 6, '2023-07-18 09:46:21', 74.85, 73.38, 48.19, 481.90, 'In Progress'),
+(3, 9, '2024-09-01 12:27:52', 83.73, 90.08, 36.86, 368.60, 'Completed');
+
+
+
+QUESTIONS
+==========
+
+1. Retrieve the names and contact details of all drivers with a rating of 4.5 or higher.
+
+=> select driver_id,first_name,last_name,phone,rating from drivers where rating >=4.5;
+======================================================================================
+
+2. Find the total number of rides completed by each driver.
+
+ select d.driver_id,d.first_name,r.ride_status from drivers d  join rides r on d.driver_id=r.driver_id where r.ride_status ='completed';
+=================================================================================
+
+3. List all riders who have never booked a ride.
+#3 select distinct (r.rider_id),r.first_name,rides.ride_status from riders r join rides on r.rider_id =rides.rider_id  where ride_status = 'cancelled';
+======================================================================================
+
+4. Calculate the total earnings of each driver from completed rides.
+
+ select  d.driver_id,d.first_name,r.fare from drivers d join rides r on d.driver_id=r.driver_id where r.ride_status ='completed'; 
+===================================================================================
+
+5. Retrieve the most recent ride for each rider.
+
+ select distinct(rr.rider_id),rr.first_name,r.ride_date from rides r join riders rr on r.rider_id=rr.rider_id order by r.ride_date desc limit 1;
+====================================================================================
+
+6. Count the number of rides taken in each city.
+
+ select r.city,count(rr.rider_id) from riders r join rides rr on r.rider_id =rr.rider_id group by r.city ;
+======================================================================================
+
+7. List all rides where the distance was greater than 20 km.
+
+ select r.ride_id,r.distance from rides r where distance >20;
+======================================================================================
+
+
+8. Identify the most preferred payment method.
+
+select count(payment_mode),payment_mode from payments as total_payment group by payment_mode order by payment_mode desc limit 1;
+==================================================================================
+
+9. Find the top 3 highest-earning drivers.
+
+ select d.driver_id,d.first_name,sum(r.fare) from rides r left join drivers d on r.driver_id=d.driver_id group by d.driver_id,d.first_name order by sum(r.fare) desc limit 3;
+======================================================================================
+
+10. Retrieve details of all cancelled rides along with the rider's and driver's names.
+
+select r.ride_id,d.first_name as drivers_name,rr.first_name as riders_name,r.ride_status from rides r join drivers d on r.driver_id =d.driver_id join riders rr on r.rider_id=rr.rider_id where r.ride_status='cancelled';
+
+=======================================================================================
