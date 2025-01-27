@@ -1,3 +1,6 @@
+#HR MANAGEMENT
+======================
+
 1. Retrieve the names and contact details of employees hired after January 1, 2023.
 #1 select e.first_name,e.phone,e.hiredate from employees e where e.hiredate > '2023-01-01';
 
